@@ -9,12 +9,15 @@ import { IEvent, ISession } from '../shared/index';
   styles: [`
     .container { padding-left:20px; padding-right:20px; image-width: 100px; },
     .event-image {height: 100px;}
-    a {cursor:pointer;}
+    a {cursor:pointer;},
+    .padding {color: red; margin-bottom:10px;}
   `]
 })
 export class EventDetailsComponent implements OnInit {
   addMode: boolean;
   event: IEvent;
+  filteredBy: string = 'all';
+  sortBy: string = 'votes';
 
   constructor(private eventService: EventService, private router: Router, private route: ActivatedRoute) {
   }

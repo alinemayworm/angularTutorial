@@ -9,7 +9,7 @@
           <em *ngIf="!validateFirstName() &&
           profileForm.controls.firstName.errors.required">Required</em>
           <em *ngIf="!validateFirstName() &&
-          profileForm.controls.firstName.errors.pattern">Must start with a letter</em>
+          profileForm.controls.firstName.errors.pattern">Must contains only letters</em>
           <em *ngIf="!validateFirstName() &&
           profileForm.controls.firstName.errors.minlength">This name is too small</em>
           <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />

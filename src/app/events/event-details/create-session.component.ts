@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ISession, EventService } from '../shared/index';
+import { ISession } from '../shared/index';
 import { restrictedWords } from '../shared/restricted-words.validator';
 
 @Component({
@@ -24,11 +24,10 @@ export class CreateSessionComponent implements OnInit {
   presenter: FormControl;
   duration: FormControl;
   level: FormControl;
-  abstract: FormControl ;
+  abstract: FormControl;
   newSessionForm: FormGroup;
 
-  constructor(private eventService: EventService) {
-  }
+
 
   ngOnInit() {
     this.name = new FormControl('', Validators.required);
