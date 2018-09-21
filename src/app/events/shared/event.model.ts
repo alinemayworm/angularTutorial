@@ -22,4 +22,5 @@ export interface ISession {
   level: string;
   abstract: string;
   voters: string[];
+  eventId?: number;
 }

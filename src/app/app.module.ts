@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent} from './common/index';
 
 import {
   EventsListComponent,
   EventThumbnailComponent,
-  EventRouteActivator,
   EventsListResolver,
+
   EventDetailsComponent,
   EventService,
   CreateEventComponent,
@@ -15,18 +16,19 @@ import {
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
-import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './router';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe';
 
 
 
 const toastr: Toastr = window['toastr'];
+const jQuery = window['$'];
+
+
 @NgModule({
   declarations: [
     EventsAppComponent ,
